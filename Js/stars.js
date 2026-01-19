@@ -18,7 +18,16 @@ for (let i = 0; i < 200; i++) {
 }
 
 function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Create a subtle purple gradient
+  const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+  gradient.addColorStop(0, 'rgba(0, 0, 0, 0.9)');  // Dark purple top
+  gradient.addColorStop(1, 'rgba(47, 0, 74, 0.95)'); // Slightly lighter purple bottom
+
+  // Fill background with gradient
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  // Draw stars
   for (let s of stars) {
     ctx.beginPath();
     ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
@@ -28,6 +37,8 @@ function animate() {
     s.y -= 0.2;
     if (s.y < 0) s.y = canvas.height;
   }
+
   requestAnimationFrame(animate);
 }
+
 animate();

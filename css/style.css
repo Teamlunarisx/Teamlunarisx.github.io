@@ -61,7 +61,8 @@ nav a:not(.logo).active {
 /* Logo link never gets underline */
 nav a.logo {
     text-decoration: none; /* remove underline */
-    border-bottom: none;    /* just in case */
+    border-bottom: none;
+    border-right: 0%;    /* just in case */
 }
 
 .logo img {
