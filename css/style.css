@@ -66,11 +66,11 @@ nav a.logo {
 }
 
 .logo img {
-    width: 17%; /* or whatever size */
-    height: auto;
-    vertical-align: middle;
-    border: 0; /* removes default blue border on linked images in some browsers */
+  height: clamp(28px, 4vw, 42px);
+  width: auto;
+  display: block;
 }
+
 
 
 main {

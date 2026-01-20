@@ -21,7 +21,7 @@ function animate() {
   // Create a subtle purple gradient
   const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
   gradient.addColorStop(0, 'rgba(0, 0, 0, 0.9)');  // Dark purple top
-  gradient.addColorStop(1, 'rgba(47, 0, 74, 0.95)'); // Slightly lighter purple bottom
+  gradient.addColorStop(1, 'rgba(26, 0, 41, 0.95)'); // Slightly lighter purple bottom
 
   // Fill background with gradient
   ctx.fillStyle = gradient;
